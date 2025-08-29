@@ -1,0 +1,98 @@
+/* styles.css - Challenge #2 (Skeleton: Rides Gallery) */
+
+
+/* 0) Base page */
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    font-size: 14px;
+    background-color: white;
+}
+
+/* 1) Container */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
+}
+
+/* 2) Section heading */
+.attractions h2 {
+    text-align: center;
+}
+
+/* 3) Cards wrapper (center all cards horizontally) */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    align-items: start;
+    justify-content: center;
+}
+
+/* 4) Card (size, spacing, border, rounded corners) */
+.card {
+    display: block;
+    flex: 0 0 calc(33.333% - 1rem);
+    overflow: hidden;
+
+    border: 2px solid lightgrey;
+    border-radius: 10px;
+    background-color: white;
+
+    transform-origin: center;
+    transition: border-color 1s ease-in-out;
+}
+
+/* 5) Card text (h3 title, paragraph blurb) */
+.card h3 {
+    font-weight: bold;
+    padding: 0;
+    margin: 0.5rem 1rem 0.5rem 1rem;
+}
+
+.card p.blurb {
+    padding: 0;
+    margin: 0 1rem 1rem 1rem;
+}
+
+/* 6) Card image (fit within card, centered) */
+img {
+    aspect-ratio: 16/10;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+/* 7) Hover state: change border to green, then make it wigglew */
+.card:hover {
+    border-color: green;
+    animation: swing 1s infinite ease-in-out;
+}
+
+/* 8) Footer */
+.site-footer {
+    border-top: 1px solid #777;
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 2rem;
+}
+
+.site-footer p {
+    padding: 0;
+    margin: 0;
+}
+
+@keyframes swing {
+  0%   { transform: rotate(0deg); }
+  10%  { transform: rotate(-1deg); }  /* left */
+  20%  { transform: rotate(1deg); }   /* right */
+  30%  { transform: rotate(0deg); }  /* left */
+  100% { transform: rotate(0deg); }    /* reset */
+}
